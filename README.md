@@ -27,9 +27,9 @@ Un scénario standard d'éxécution est codé dans les fichiers `Simple*.java` .
 Instructions
 -------
 
-*`make run` permet de compiler `Simple.java` puis d'éxécuter le programme en affichant à l'écran le déroulé du scénario.
-*`make memo` effectue le même travail que `make run` sur `SimpleMemo.java` et affiche en plus le bilan des actions.
-*`make file` effectue le même travail que `make run` sur `SimpleFile.java` et stocke en plus le bilan des actions dans le fichier `simple.txt`.
-*`make` éxécute les trois commandes précédentes.
-*`make test` permet compiler les tests et de lancer l'exécutable.
-*`make clean` permet de supprimer tous les fichiers inutiles et .class des répertoires.
+* `make run` permet de compiler `Simple.java` puis d'éxécuter le programme en affichant à l'écran le déroulé du scénario.
+* `make memo` effectue le même travail que `make run` sur `SimpleMemo.java` et affiche en plus le bilan des actions.
+* `make file` effectue le même travail que `make run` sur `SimpleFile.java` et stocke en plus le bilan des actions dans le fichier `simple.txt`.
+* `make` éxécute les trois commandes précédentes.
+* `make test` permet compiler les tests et de lancer l'exécutable.
+* `make clean` permet de supprimer tous les fichiers inutiles et .class des répertoires.

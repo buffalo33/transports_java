@@ -19,8 +19,8 @@ Les classes de comportement des passagers concernent leur attitudes vis-à-vis d
 * Un `PassagerIndecis.java` ne monte que si il y a des places debout. A chaque arrêt, il tente d'alterner entre place assise et place debout 
 
 De plus, deux systèmes de stockage en mémoire des événements sont mis en place :
-*`CollectMemo.java` stocke dans l'éxécution du programme et affiche le bilan des actions à l'écran.
-*`CollectMemo.java` stocke dans un fichier (ici simple.txt) le bilan des actions.
+* `CollectMemo.java` stocke dans l'éxécution du programme et affiche le bilan des actions à l'écran.
+* `CollectMemo.java` stocke dans un fichier (ici simple.txt) le bilan des actions.
 
 Un scénario standard d'éxécution est codé dans les fichiers `Simple*.java` .
 

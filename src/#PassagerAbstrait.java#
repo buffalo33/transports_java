@@ -1,0 +1,96 @@
+package tec;
+
+abstract class PassagerAbstrait implements Usager, Passager{
+    
+    private String nom;
+    private int distance;
+    private Position position;
+    final private ComportementNouvelArret comportement;
+    
+    PassagerAbstrait(String nom, int distance, ComportementNouvelArret comportement){
+	this.nom = nom;
+	this.distance = distance;
+	this.position = Position.DEHORS;
+
+	this.comportement = comportement;
+    }
+
+    abstract void choixPlaceMontee(Vehicule v);
+
+    final protected void choixChangerPlace(Passager p, Vehicule v, int distanceDestination){
+	comportement.choixChangerPlace(p, v, distanceDestination);
+    }
+
+    final protected int distanceAvantSortie(int numeroArret){
+	return distance - numeroArret;
+    }
+    
+    final public void monterDans(Transport t){
+	Vehicule v = (Vehicule) t;
+	choixPlaceMontee(v);
+    }
+
+    final public void nouvelArret(Vehicule v, int numeroArret){
+	if (distance <= numeroArret){
+	    v.arretDemanderSortie(this);
+	}
+	else
+	    {
+		choixChangerPlace(this, v, distanceAvantSortie(numeroArret));
+	    }
+    }
+
+    public String nom(){
+	return nom;
+    }
+    
+    public boolean estDehors(){
+	return position.estDehors();
+    }
+
+    public boolean estAssis(){
+	return position.estAssis();
+    }
+
+    public boolean estDebout(){
+	return position.estDebout();
+    }
+
+    public void changerEnDehors(){
+	position = Position.DEHORS;
+    }
+
+    public void changerEnAssis(){
+	position = Position.ASSIS;
+    }
+
+    public void changerEnDebout(){
+	position = Position.DEBOUT;
+    }
+
+    
+    @Override
+    public String toString(){
+	String str = this.nom + " <";
+	
+	if (estAssis() )
+	    {
+		str += "assis";
+	    }
+	if (estDebout() )
+	    {
+		str += "debout";
+	    }
+	if (estDehors() )
+	    {
+		str += "endehors";
+	    }
+	str += ">\n";
+
+	str += "arret de sortie : " + distance + "\n";
+	str += "position : " + position.toString() + "\n";
+	str += "comportement : " + comportement.toString() + "\n";
+	return str;
+    }
+}
+   

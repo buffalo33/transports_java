@@ -1,0 +1,18 @@
+package tec;
+
+class AuCollectMemo extends Greffon {
+
+    public ArrayList<int[]> memo = new ArrayList<int[]>;
+
+    public ACollectMemo(int nbPlaceAssise, int nbPlaceDebout){
+	super(nbPlaceAssise, nbPlaceDebout);
+    }
+
+    void addMemory(int nbEntree, int nbSortie, int nbArret){
+	memo.add([nbEntree, nbSortie, nbArret]);
+    }
+
+}
+
+
+

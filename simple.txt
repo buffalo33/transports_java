@@ -1,0 +1,5 @@
+arret: 1, nombre d'entrants: 1, nombre de sortants: 0
+arret: 2, nombre d'entrants: 1, nombre de sortants: 0
+arret: 3, nombre d'entrants: 1, nombre de sortants: 0
+arret: 4, nombre d'entrants: 0, nombre de sortants: 2
+arret: 5, nombre d'entrants: 0, nombre de sortants: 1

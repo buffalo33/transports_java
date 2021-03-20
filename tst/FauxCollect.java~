@@ -1,0 +1,11 @@
+package tec;
+
+class FauxCollect implements Collect {
+
+    public void addMemory(int nbEntree, int nbSortie, int nbArret){
+	Systeme.out.println("Mise en memoire de" + nbEntree "entrees et " + nbSortie "sorties a l'arret" + nbArret);
+    }
+}
+
+
+

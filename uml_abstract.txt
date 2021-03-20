@@ -1,0 +1,91 @@
+@stratuml
+
+package "tec" #DDDDDD {
+PassagerAbstrait o-- ComportementNouvelArret
+PassagerAbstrait <|-- MonteeFatigue
+PassagerAbstrait <|-- MonteeTetu
+PassagerAbstrait <|-- MonteeRepos
+PassagerAbstrait <|-- MonteeSportif
+ComportementNouvelArret <|-- ArretCalme
+ComportementNouvelArret <|-- ArretNerveux
+ComportementNouvelArret <|-- ArretPrudent
+ComportementNouvelArret <|-- ArretAgoraphobe
+ComportementNouvelArret <|-- ArretPoli
+}
+
+abstract class PassagerAbstrait {
+-nom:String
+-distance:int
+-position:Position
+~comportement:ComportementNouvelArret
+~<<create>> PassagerAbstrait(nom:String,distance:int,comportement:ComportementNouvelArret)
+{abstract} choixPlaceMontee(v:Vehicule):void
+~choixChangerPlace(p:Passager,v:Vehicule,distanceDestination: int): void 
+#{final} distanceAvantSortie(numerroArret: int):int
++{final} monterDans(t: Transport):void
++{final} nouvelArret(v:Vehicule,numeroArret:int)
++nom():String
++estDehors():boolean
++estAssis():boolean
++estDebout():boolean
++changerEnDehors():void
++changerEnAssis():void
++changerEnDebout():void
++toString(): String
+}
+
+class ArretCalme {
++{static} {final} CALME:ArretCalme
+-<<create>> ArretCalme()
++choixChangerPlace(p:Passager,v:Vehicule)
+}
+
+class ArretNerveux {
++{static} {final} NERVEUX:ArretCalme
+-<<create>> ArretNerveux()
++choixChangerPlace(p:Passager,v:Vehicule)
+}
+
+class ArretPrudent {
++{static} {final} PRUDENT:ArretCalme
+-<<create>> ArretPrudent()
++choixChangerPlace(p:Passager,v:Vehicule)
+}
+
+class ArretAgoraphobe {
++{static} {final} AGORAPHOBE:ArretCalme
+-<<create>> ArretAgoraphobe()
++choixChangerPlace(p:Passager,v:Vehicule)
+}
+
+class ArretPoli {
++{static} {final} POLI:ArretCalme
+-<<create>> ArretPoli()
++choixChangerPlace(p:Passager,v:Vehicule)
+}
+
+interface ComportementNouvelArret {
+-<<create>> ComportementNouvelArret(p:Passager,v:Vehicule,distanceDestination:int)
+}
+
+class MonteeFatigue {
++<<create>> MonteeFatigue(nom:String,distance:int,comportement:ComportementNouvelArret)
+~choixPlaceMontee(v:Vehicule):void
+}
+
+class MonteeTetu {
++<<create>> MonteeTetu(nom:String,distance:int,comportement:ComportementNouvelArret)
+~choixPlaceMontee(v:Vehicule):void
+}
+
+class MonteeRepos {
++<<create>> MonteeRepos(nom:String,distance:int,comportement:ComportementNouvelArret)
+~choixPlaceMontee(v:Vehicule):void
+}
+
+class MonteeSportif {
++<<create>> MonteeSportif(nom:String,distance:int,comportement:ComportementNouvelArret)
+~choixPlaceMontee(v:Vehicule):void
+}
+
+@enduml

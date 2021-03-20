@@ -31,28 +31,33 @@ class SimpleFile {
     Usager jayne = new PassagerStresse("Jayne", 4);
     Usager inara = new PassagerIndecis("Inara", 5);
 
-    MonteeSportif test = new MonteeSportif("Franck", 5, ArretNerveux.NERVEUX);
-    //test.comportement = ArretCalme.CALME; --> provoque une erreur
-    
+    System.out.println("***EXECUTION SimpleFile***");
+
     //0
     System.out.println(serenity);
-
+    System.out.println();
+    
     serenity.allerArretSuivant();
+
     //1
     kaylee.monterDans(serenity);
-
+    
     System.out.println(serenity);
     System.out.println(kaylee);
-
+    System.out.println();
+    
     serenity.allerArretSuivant();
+
     //2
     jayne.monterDans(serenity);
-
+    
     System.out.println(serenity);
     System.out.println(kaylee);
     System.out.println(jayne);
-
+    System.out.println();
+    
     serenity.allerArretSuivant();
+
     //3
     inara.monterDans(serenity);
 
@@ -60,19 +65,23 @@ class SimpleFile {
     System.out.println(kaylee);
     System.out.println(jayne);
     System.out.println(inara);
-
+    System.out.println();
+    
     serenity.allerArretSuivant();
     //4
     System.out.println(serenity);
     System.out.println(kaylee);
     System.out.println(jayne);
     System.out.println(inara);
-
+    System.out.println();
+    
     serenity.allerArretSuivant();
     //5
     System.out.println(serenity);
     System.out.println(kaylee);
     System.out.println(jayne);
     System.out.println(inara);
+    System.out.println();
     }
    }
+

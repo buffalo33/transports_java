@@ -29,18 +29,13 @@ class Simple {
 
   static public void main (String[] args) throws TecException{
       Transport serenity = new Autobus(3, 3);
-
-      //lorsque l'on, utilise une fonction interne d'autobus, le programme ne compile pas exemple avec : 
-      //serenity.checherEmplacementVide();
     
     
     Usager kaylee = new PassagerIndecis("Kaylee", 4);
     Usager jayne = new PassagerStresse("Jayne", 4);
     Usager inara = new PassagerIndecis("Inara", 5);
 
-    MonteeSportif test = new MonteeSportif("Franck", 5, ArretNerveux.NERVEUX);
-    //test.comportement = ArretCalme.CALME; --> provoque une erreur
-    
+    System.out.println("***EXECUTION Simple***");
     //0
     System.out.println(serenity);
     System.out.println();
@@ -89,47 +84,7 @@ class Simple {
     System.out.println(kaylee);
     System.out.println(jayne);
     System.out.println(inara);
+    System.out.println();
     }
    }
 
-/* Resultat de l'execution: "Kaylee", 4;
-[arret 0] assis<1> debout<2>
-[arret 1] assis<0> debout<2>
-Kaylee <assis>
-[arret 2] assis<0> debout<1>
-Kaylee <assis>
-Jayne <debout>
-[arret 3] assis<0> debout<0>
-Kaylee <assis>
-Jayne <debout>
-Inara <debout>
-[arret 4] assis<1> debout<1>
-Kaylee <endehors>
-Jayne <endehors>
-Inara <debout>
-[arret 5] assis<1> debout<2>
-Kaylee <endehors>
-Jayne <endehors>
-Inara <endehors>
-*/
-
-/* Resultat de l'execution: "Kaylee", 3;
-[arret 0] assis<1> debout<2>
-[arret 1] assis<0> debout<2>
-Kaylee <assis>
-[arret 2] assis<0> debout<1>
-Kaylee <assis>
-Jayne <debout>
-[arret 3] assis<0> debout<1>
-Kaylee <endehors>
-Jayne <debout>
-Inara <assis>
-[arret 4] assis<0> debout<2>
-Kaylee <endehors>
-Jayne <endehors>
-Inara <assis>
-[arret 5] assis<1> debout<2>
-Kaylee <endehors>
-Jayne <endehors>
-Inara <endehors>
-*/
